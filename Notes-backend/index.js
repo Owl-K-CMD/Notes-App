@@ -75,7 +75,7 @@ app.post('/api/notes', (request, response) => {
 
   notes = notes.concat(note)
 
-  response.json(note)
+  response.json(notes)
 })
 
 app.delete('/api/notes/:id', (request, response) => {
