@@ -130,7 +130,7 @@ return (
 <div key = {note.id}>
           
            <Note key={i} 
-           note={notes}
+           note={note}
            toggleImportance={() => toggleImportanceOf(notes.id)}
            />
            </div>)}
