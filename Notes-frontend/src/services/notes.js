@@ -2,6 +2,9 @@
 import axios from 'axios'
 const baseUrl = '/api/notes'
 
+console.log('Base URL is:', baseUrl);
+
+
 const getAll = () => {
   const request = axios.get(baseUrl)
   const nonExisting = {
@@ -11,6 +14,7 @@ const getAll = () => {
   }
   return request.then(response=> response.data.concat(nonExisting))
 }
+console.log('now base URL is:', baseUrl);
 
 const create = newObject => {
   const request = axios.post(baseUrl, newObject)
