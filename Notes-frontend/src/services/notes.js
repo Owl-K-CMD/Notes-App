@@ -1,6 +1,6 @@
 
 import axios from 'axios'
-const baseUrl = 'https://your-backend-url.onrender.com/api/notes';
+const baseUrl = '/api/notes';
 
 
 console.log('Base URL is:', baseUrl);
