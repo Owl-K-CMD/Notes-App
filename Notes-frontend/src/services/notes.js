@@ -1,6 +1,6 @@
 
 import axios from 'axios'
-const baseUrl = '/api/try';
+const baseUrl = '/api/notes';
 
 
 console.log('Base URL is:', baseUrl);
