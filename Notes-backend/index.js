@@ -4,7 +4,7 @@ const app = express()
 app.use(express.static('dist'));
 
 
-let notes = [
+const notes = [
   {
     id: '1',
     content: 'HTML is easy bt not for begginer',
@@ -39,6 +39,10 @@ app.get('/', (request, response) => {
 
 app.get('/api/notes', (request, response) => {
   response.json(notes)
+})
+
+app.get('api/try', (request, response) => {
+  response.send('<h1>Hello World</h1>')
 })
 
 app.get('/api/notes/:id', (request, response) => {
