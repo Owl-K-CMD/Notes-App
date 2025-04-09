@@ -8,12 +8,7 @@ console.log('Base URL is:', baseUrl);
 
 const getAll = () => {
   const request = axios.get(baseUrl)
-  const nonExisting = {
-    id: 10000,
-    content: 'This note is not saved to server and will be deleted',
-    important: true,
-  }
-  return request.then(response=> response.data.concat(nonExisting))
+  return request.then(response => response.data)
 }
 console.log('now base URL is:', baseUrl);
 
