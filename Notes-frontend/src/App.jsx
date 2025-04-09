@@ -125,12 +125,12 @@ return (
 
       <ul>   
 
-        {notesToShow.map((note, i) => {
+        {notesToShow.map((notes, i) => {
           return (
-<div key = {note.id}>
+<div key = {notes.id}>
           
            <Note key={i} 
-           note={note}
+           notes={notes}
            toggleImportance={() => toggleImportanceOf(notes.id)}
            />
            </div>)}
