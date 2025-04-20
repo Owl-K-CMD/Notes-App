@@ -13,6 +13,7 @@ yarn-error.log*
 # Optional editor/IDE specific files
 .vscode/
 .idea/
+dist/
 
 # Optional OS generated files
 .DS_Store
