@@ -35,13 +35,13 @@ const note = [
   {content: 'CSS is hard', date: new Date(), important: false,},
   { content: 'Browser can execute only JavaScript', date: new Date(), important: false,},
 ]
-
+/*
 Note.insertMany(note).then(result => {
   console.log('note saved!')
     console.log(result)
   mongoose.connection.close()
 })
-  /*
+  */
 Note.find({}).then(result => {
   result.forEach(note => {
     console.log(note)
@@ -49,4 +49,3 @@ Note.find({}).then(result => {
   mongoose.connection.close()
 })
   
-*/

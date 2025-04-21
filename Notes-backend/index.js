@@ -18,9 +18,11 @@ const requestLogger = (request, response, next) => {
   next()
 }
 
+
 app.use(requestLogger)
 app.use(express.static('dist'))
 app.use(express.json())
+
 app.get('/', (request, response) => {
   response.send('<h1>Hello World!</h1>')
 })
@@ -63,22 +65,19 @@ const generateId = () => {
 }
 
 app.post('/api/notes', (request, response) => {
-  const body = request.body
+  const body = response.body
 
   if (!body.content) {
-    return response.status(400).json({
-      error: 'content missing',
-    })
+    return response.status(400).json({ error: 'content missing' })
   }
 
   const note = new Note({
     content: body.content,
-    important: body.important || false,
-    id: generateId(),
+    important: body.important || false
   })
 
-  note.save().then(savednote => {
-    response.json(savednote)
+  note.save().then(savedNote => {
+    response.json(savedNote)
   })  
 })
 
