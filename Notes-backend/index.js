@@ -13,7 +13,7 @@ const notes = []
 const requestLogger = (request, response, next) => {
   console.log('Methode:', request.method)
   console.log('Path:', request.path)
-  console.log('Body:', response.body)
+  console.log('Body:', request.body)
   console.log('---')
   next()
 }
@@ -65,7 +65,7 @@ const generateId = () => {
 }
 
 app.post('/api/notes', (request, response) => {
-  const body = response.body
+  const body = request.body
 
   if (!body.content) {
     return response.status(400).json({ error: 'content missing' })
