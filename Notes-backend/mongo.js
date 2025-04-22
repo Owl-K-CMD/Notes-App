@@ -30,7 +30,7 @@ noteSchema.set('toJSON', {
 
 const Note = mongoose.model('Note', noteSchema)
 
-const note = [
+const notes = [
   {content: 'HTML is easy', date: new Date(), important: true},
   {content: 'CSS is hard', date: new Date(), important: false,},
   { content: 'Browser can execute only JavaScript', date: new Date(), important: false,},
@@ -43,8 +43,8 @@ Note.insertMany(note).then(result => {
 })
   */
 Note.find({}).then(result => {
-  result.forEach(note => {
-    console.log(note)
+  result.forEach(notes => {
+    console.log(notes)
   })
   mongoose.connection.close()
 })
