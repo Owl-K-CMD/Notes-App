@@ -29,13 +29,13 @@ noteSchema.set('toJSON', {
 })
 
 const Note = mongoose.model('Note', noteSchema)
-
+/*
 const notes = [
   {content: 'HTML is easy', date: new Date(), important: true},
   {content: 'CSS is hard', date: new Date(), important: false,},
   { content: 'Browser can execute only JavaScript', date: new Date(), important: false,},
 ]
-/*
+
 Note.insertMany(note).then(result => {
   console.log('note saved!')
     console.log(result)
